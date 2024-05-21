@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <title>Other Data Types</title>
+    </head>
+    <script>
+
+        let count=45;
+        console.log(count,"is of type",typeof(count))
+
+        let pi=3.142
+        console.log(pi,"is of type",typeof(pi))
+
+        let isRaining=false
+        console.log(isRaining," is a type of ",typeof(isRaining))
+
+        let age;
+        console.log(age)
+
+        let x=null;
+        console.log(x)
+
+        let incomingValue=prompt("Enter a Number");
+        console.log(incomingValue,"is of type",typeof(incomingValue));
+
+        //Convert the incomingValue to a integer 
+        incomingValue=parseInt(incomingValue);
+        
+        if(isNaN(incomingValue)){
+            alert("You entered a non numeric value")
+        }else{
+        console.log(incomingValue,"is of type",typeof(incomingValue));
+
+        let addition=incomingValue+20;
+        console.log("Addition is",addition)
+        }
+
+    </script>
+
+    <body>
+        <h1>Integer, Floats, Boolean, Null</h1>
+        
+    </body>
+</html>

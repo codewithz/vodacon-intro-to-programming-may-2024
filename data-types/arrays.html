@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <title>Introduction to Arrays</title>
+    </head>
+
+    <script>
+
+        let fruits=['pineapple','banana','orange','grapes']
+
+        console.log("Fruits Array:",fruits)
+
+        const lengthOfArray=fruits.length;
+
+        for(let index=0;index<lengthOfArray;index++){
+            console.log(index," -- ",fruits[index])
+        }
+
+        //Adding the elements to the array
+        //push
+
+        fruits.push('Strawberry')
+        console.log(fruits)
+
+        //unshift
+        fruits.unshift('Apple')
+        console.log(fruits)
+
+        //Removing the elements from the array 
+        //pop
+        console.log("Before Pop:",fruits)
+        const poppedElement=fruits.pop()
+        console.log("Popped Element:",poppedElement)
+        console.log("After Pop:",fruits)
+
+        //shift
+        const shiftedElement=fruits.shift()
+        console.log("Shifted Element:",shiftedElement);
+        console.log(fruits)
+
+        //  ['pineapple', 'banana', 'orange', 'grapes']
+        //splice (fromWhichIndexWeWantToDelete,howManyElementsWeWantToDelete)
+
+        fruits.splice(1,1)
+        console.log(fruits)
+
+
+
+    </script>
+    <body>
+        <h2>Arrays in Javascript</h2>
+    </body>
+</html>

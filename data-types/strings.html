@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Introduction to String</title>
+    </head>
+    <script>
+
+        let name='Alex';  // semi colon in JS is optional 
+        console.log("Hello", name)
+
+        //Strings can be in '' or in ""
+
+        let empName='Thomas'
+        let department="Information Technology";
+        console.log("Employee Name:",empName,"Department:",department)
+
+        //Multi line string in Javascript  -- 
+        //  backticks ``
+        // button below escape
+
+        let paragraph =`
+        Hi my name is Zartab 
+        I live in Mumbai, India
+        I love to code
+        `
+
+        console.log(paragraph)
+
+        // String concatenation 
+
+        let company="Vodacon"
+        let empCode='V1234'
+        empName='Zartab N'
+
+        // Hi my name is -------, I work for -----, my emplpoyee code is -----
+
+        let result="Hi my name is "+empName+", I work for "+company+", my emplpoyee code is "+empCode;
+        console.log(result)
+
+        let interpolatedResult=`Hi my name is ${empName}, I work for ${company}, my emplpoyee code is ${empCode}`
+        console.log(interpolatedResult)
+
+
+
+    </script>
+
+    <body>
+        <h3>Strings in JS</h3>
+    </body>
+</html>
