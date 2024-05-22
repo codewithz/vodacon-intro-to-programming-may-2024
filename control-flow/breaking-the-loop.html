@@ -1,0 +1,32 @@
+
+
+<html>
+    <head>
+        <title>Break Statement</title>
+    </head>
+   
+
+    <body>
+        <h1>Breaking the Loop</h1>
+    </body>
+    <script>
+        // Program to find the sum of positive numbers
+    // the while loop runs infinitely
+    // loop terminates only when user enters a negative number
+        let sum=0;
+        // infinte Loop
+        while(true){
+          let number=prompt("Enter a number:")
+          number=parseInt(number);
+
+        //   Terminate if the number is negative or zero
+        if(number<=0){
+            break;
+        }
+        sum=sum+number;
+        }
+
+        console.log("Sum of the inserted numbers is : ",sum)
+
+    </script>
+</html>

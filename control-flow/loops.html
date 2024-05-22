@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Loops</title>
+    </head>
+    <script>
+        console.log("--------while loop -------------")
+
+        let i=1;
+        while(i<=10){
+            console.log("i=",i)
+            i++
+        }
+
+        console.log("------------ do while loop-----------")
+
+        let j=1;
+        do{
+            console.log("j=",j)
+            j++;
+        }while(j<=10);
+
+        console.log("-------------- for loop ----------")
+
+        for(let k=1;k<=10;k++){
+            console.log("k=",k)
+        }
+
+        //----------- User Depenedent /Infinite Loop 
+
+        let input=prompt("Enter a command [Type exit to stop] : ")
+            // EXIT --> exit
+        while(input.toLowerCase() != 'exit'){
+            console.log(">>",input)
+            input=prompt("Enter a command [Type exit to stop] : ")
+        }
+        console.log("Ended")
+
+    </script>
+    <body>
+        <h1>Loops</h1>
+    </body>
+</html>

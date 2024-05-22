@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Switch Case</title>
+    </head>
+    <script>
+        let trafficLight='GREEN';
+        let message='';
+
+       switch(trafficLight.toLowerCase()){
+
+        case 'red':
+            message="Stop Immedialtely";
+            break;
+        
+        case 'yellow':
+            message='Prepare to Stop';
+            break;
+        
+        case 'green':
+            message='Proceed or Continue Driving'
+            break;
+        
+        default:
+            message='Invalid Traffic Light Color'
+
+       }
+
+       console.log(trafficLight,message)
+
+
+    </script>
+    <body>
+        <h1>Switch Case</h1>
+    </body>
+</html>
