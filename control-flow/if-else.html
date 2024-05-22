@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Check Voting Age</title>
+    </head>
+   
+    <body>
+        <h1>Lets check your eligibility</h1>
+        <br>
+        <p id="voting"></p>
+    </body>
+    <script>
+        let age=prompt("Enter your age")
+        const validAge=18;
+        let element=document.getElementById("voting")
+        if(isNaN(age)){
+           element.innerHTML="Your input is invalid "
+        }else{
+            if(age>=validAge){
+                element.innerHTML="Great!! You can cast your vote!!"
+                console.log(element)
+            }else{
+                element.innerHTML="You will need to wait till 18 to cast your vote!!"
+                console.log("You will need to wait till 18 to cast your vote!!")
+            }
+        }
+    </script>
+</html>
