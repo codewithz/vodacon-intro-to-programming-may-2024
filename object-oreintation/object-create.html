@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Object Create</title>
+    </head>
+    <script>
+        const book=Object.create({},{
+            title:{value:'Master JS'},
+            author:{value:'Code With Z'},
+            pages:{value:300},
+            read:{value:function(){
+                console.log("Page 4 of 300")
+            }},
+        });
+
+        console.log(book)
+        console.log(book.title,'--',book.author)
+        book.read()
+    </script>
+    <body>
+        <h1>Object Create</h1>
+    </body>
+</html>

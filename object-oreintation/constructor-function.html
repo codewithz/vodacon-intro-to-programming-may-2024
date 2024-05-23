@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title> Constructor Function</title>
+    </head>
+    <script>
+       function Book(title,author,pages,read){
+        this.title=title
+        this.pages=pages
+        this.author=author
+        this.publication='NobleProg'
+        this.read=read
+       }
+
+       function readBook(){
+        console.log("Page 3 of 300")
+       }
+
+    //  let x=  new Book("Test","Test",100,readBook)
+    //  console.log(x)
+
+       const b1=new Book("Master JS","Code WIth Z",300,readBook)
+       console.log(b1)
+       b1.read()
+       const b2=new Book("Master Java","Khobeib",500,readBook)
+       console.log(b2)
+       b2.read()
+
+       
+
+
+    </script>
+    <body>
+        <h1> Constructor Function</h1>
+    </body>
+</html>

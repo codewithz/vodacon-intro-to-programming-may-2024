@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Car </title>
+    </head>
+    <script>
+ 
+        class Car{
+            constructor(){
+                this.make='Toyota'
+                this.model='Corolla'
+                this.price=10000
+                this.speed=0
+            }
+
+            accelerate(){
+                // this.speed=this.speed+10
+                this.speed+=10
+            }
+
+            brakes(){
+                this.speed-=5
+            }
+
+            getSpeed(){
+                return this.speed;
+            }
+        }
+
+        const car1=new Car();
+        console.log(car1)
+
+        car1.accelerate()
+        console.log(car1)
+
+        car1.brakes()
+        console.log(car1)
+        
+    </script>
+    <body>
+        <h1>Car </h1>
+    </body>
+</html>

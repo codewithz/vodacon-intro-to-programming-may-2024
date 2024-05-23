@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Class </title>
+    </head>
+    <script>
+        class Book{
+            constructor(title,author,pages){
+                this.title=title
+                this.author=author
+                this.pages=pages
+                this.publication='NobleProg'
+            }
+
+            read(){
+                console.log(`${this.title} written by ${this.author} is of ${this.pages} 
+                              pages and published by ${this.publication} `)      
+            }
+        }
+
+        const book1=new Book("Master JS","Code With Z",300)
+        book1.read()
+
+        console.log(book1)
+    </script>
+    <body>
+        <h1>Class </h1>
+    </body>
+</html>

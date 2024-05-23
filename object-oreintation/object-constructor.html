@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Object Constructor</title>
+    </head>
+    <script>
+       let book1=new Object()
+       book1.title='Master JS'
+       book1.author='Code With Z'
+       book1.pages=300
+       book1.read=function(){
+        console.log("Page 2 of 300")
+       }
+
+       console.log(book1)
+       console.log(`Name of the book is ${book1.title} written by ${book1.author}`)
+       book1.read()
+
+       let book2=new Object()
+       book2.title='Master Java'
+       book2.author='Khobeib'
+       book2.pages=300
+       book2.read=function(){
+        console.log("Page 2 of 300")
+       }
+
+       console.log(book2)
+       console.log(`Name of the book is ${book2.title} written by ${book2.author}`)
+       book2.read()
+
+       let car=new Object()
+       car.name='Sunny'
+       car.company='Nissan'
+
+       console.log(car)
+    </script>
+    <body>
+        <h1>Object Constructor</h1>
+    </body>
+</html>
