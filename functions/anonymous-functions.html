@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Anonymous Functions</title>
+
+    </head>
+    <script>
+
+        function sayHello(){
+            console.log("Hello All");
+        }
+
+        let variableHoldingFunction=function(){
+            console.log("Hi All")
+        }
+
+        setTimeout(sayHello,3000)
+        setTimeout(variableHoldingFunction,6000)
+        setTimeout(function(){
+            console.log("Hello Folks")
+        },9000)
+
+        //---------------------------------------------------------
+        console.log("---------------- with arrays------------")
+         let colors=['red','green','blue','yellow','purple']
+
+         for(let index=0;index<colors.length;index++){
+             const color=colors[index]
+            console.log(`I love ${color} color`)
+         }
+
+        console.log("------------ using foreach------------------")
+        //  colors.forEach(passAFunctionWhichDecidesOutputForEachElementInArray)
+
+        function displayColor(color){
+            console.log(`I like ${color} color `)
+        }
+
+        colors.forEach(displayColor);
+
+        //---------------------------------------------------------
+        console.log("---------- Self Defined Higher Order Function---------")
+
+        const numbersList=[10,20,30]
+// -------------Higher Order Function --- WHAT ------------------
+        function multiplier(multiply,numbers){
+            numbers.forEach(multiply)
+        }
+// --------- Input Functions ------------  HOW ------------------------------
+        function multiplyByTwo(number){
+            console.log(number*2)
+        }
+        function multiplyByThree(number){
+            console.log(number*3)
+        }
+        function multiplyByFour(number){
+            console.log(number*4)
+        }
+// ------------Lt's execute them ------------------
+
+        multiplier(multiplyByTwo,[1,2,3,4,5,6,7])
+        console.log("------------------------------------")
+        multiplier(multiplyByThree,numbersList)
+        console.log("------------------------------------")
+        multiplier(multiplyByFour,numbersList)
+
+
+    </script>
+
+    <body>
+        <h1>Anonymous Functions</h1>
+    </body>
+</html>
