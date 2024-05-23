@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>Polymorphism</title>
+    </head>
+    <script>
+
+        class Shape{
+            constructor(){
+                console.log("Shape Constructor invoked")
+            }
+
+            area(){
+                console.log("Generic Area calculation of Shape")
+            }
+        }
+
+        class Circle extends Shape{
+            constructor(radius){
+                super()
+                this.radius=radius
+                console.log(`Circle constructor is invoked with radius ${this.radius}`)
+            }
+
+            area(){
+                const areaOfCircle=Math.PI*this.radius*this.radius;
+                console.log(`Area of circle with radius ${this.radius} is ${areaOfCircle}`)
+            }
+
+        }
+        class Square extends Shape{
+            constructor(length){
+                super()
+                this.length=length
+                console.log(`Square  constructor is invoked with length ${this.length}`)
+            }
+
+            area(){
+                const areaOfSquare=this.length*this.length;
+                console.log(`Area of square with length ${this.length} is ${areaOfSquare}`)
+            }
+
+        }
+
+        const c=new Circle(24);
+        c.area()
+
+        const s=new Square(20)
+        s.area()
+
+    </script>
+    <body>
+        <h1>Method Overriding- Polymorphism</h1>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Inheritance</title>
+    </head>
+    <script>
+//------------ Parent Class
+        class User{
+
+            constructor(name,account,balance){
+                this.name=name
+                this.account=account
+                this.balance=balance;
+            }
+
+            showBasicDetails(){
+                console.log(`${this.account} held by ${this.name} have a balance 
+                                of ${this.balance} USD`)    
+            }
+        }
+//  ----------- Child CLass
+        class SilverUser extends User{
+            constructor(name,account,balance,points){
+                super(name,account,balance)
+                this.points=points;
+                console.log("THis is a Silver User")
+            }
+
+            rewardsProgram(){
+                console.log("This user has a rewards Program")
+            }
+        }
+
+        const sU1=new SilverUser("Tom",123456789,20000,35);
+        sU1.showBasicDetails()
+        sU1.rewardsProgram();
+        console.log(sU1)
+//  ----------- Child CLass
+        class GoldenUser extends User{
+            constructor(name,account,balance,points){
+                super(name,account,balance)
+                this.points=points;
+                console.log("This is a Golden User")
+            }
+
+            getRM(){
+                console.log("This user has a Dedicated Relationship Manager")
+            }
+        }
+
+        const gU1=new GoldenUser("Alex",123456780,70000,350);
+        gU1.showBasicDetails()
+        gU1.getRM()
+        console.log(gU1)
+
+
+
+    </script>
+    <body>
+        <h1>Inheritance</h1>
+    </body>
+</html>
