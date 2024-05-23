@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Closures</title>
+    </head>
+    <script>
+        function outerFunction(){
+            function innerFunction(){
+                console.log(" I am an inner function")
+            }
+
+            return innerFunction;
+        }
+
+        const innerFunctionReturnedFromOuterFunction=outerFunction()
+        innerFunctionReturnedFromOuterFunction();
+    //   -----------------------------------------------------------------------
+        function multiplier(multiplicationFactor){
+
+            function multiply(number){
+                return number*multiplicationFactor;
+            }
+
+            return multiply;
+        }
+
+        const multiplyBy3=multiplier(3)
+        const multiplyByFour=multiplier(4)
+
+        console.log(multiplyBy3(5))
+        console.log(multiplyByFour(5))
+
+    </script>
+    <body>
+        <h1>Closures</h1>
+    </body>
+</html>

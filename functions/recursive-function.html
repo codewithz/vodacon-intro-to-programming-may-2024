@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Recursive Functions</title>
+    </head>
+    <script>
+        function counter(count){
+            console.log(count)
+
+            if(count>1){
+                count=count-1
+                counter(count) //from within the counter() we are calling the counter()
+            }else{
+                return;
+            }
+        }
+
+        counter(5)
+
+        //--------- Factorial -------------
+
+        function factorial(number){
+
+            if(number>1){
+                return number*factorial(number-1)
+            }else{
+                return 1;
+            }
+        }
+
+        let x=7;
+
+        let factorialResult=factorial(x)
+
+        console.log(`Factorial of ${x} is ${factorialResult}`)
+    </script>
+  
+    <body>
+        <h1>Recursive Functions</h1>
+    </body>
+</html>

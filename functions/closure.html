@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Closures - Data Privacy</title>
+    </head>
+    <script>
+        
+        let x=0;
+        function sum(){
+            
+            function increaseSum(){
+                x=x+1;
+                return x;
+                // increment the value of x by 1
+            //    if(x<=100){
+            //     x=x+1;
+            //     return x;
+            //    }
+            //    else{
+            //     return 0;
+            //    }
+
+            }
+        return increaseSum;
+        }
+
+        const y=sum()
+        console.log(y())
+        console.log(y())
+        console.log(y())
+        console.log(y())
+        x=250;
+        console.log(y())
+        console.log(y())
+        
+    </script>
+    <body>
+        <h1>Closures</h1>
+    </body>
+</html>
