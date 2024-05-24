@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Encapsulation</title>
+    </head>
+    <script>
+        class BankAccount{
+
+            // Private Variables 
+             #accountNumber;
+             #balance;
+
+            constructor(accountNumber,balance){
+                this.#accountNumber=accountNumber
+                this.#balance=balance;
+            }
+
+            
+
+            deposit(amount){
+                if(amount>0){
+                    this.#balance+=amount
+                    console.log(`Deposited ${amount} to ${this.#accountNumber}.
+                     New Balance: ${this.#balance}`) 
+                }else{
+                    console.log("Deposit amount should be more than zero")
+                }
+
+            }
+
+            withdraw(amount){
+                if(amount>0 && amount<=this.#balance){
+                    this.#balance-=amount
+                    console.log(`Withdrawn ${amount} from ${this.#accountNumber}.
+                     New Balance: ${this.#balance}`) 
+                }else{
+                    console.log("Insufficient or Invalid amount")
+                }
+            }
+
+            getBalance(){
+                console.log(`Account number: ${this.#accountNumber} || Balance: ${this.#balance}`)
+            }
+        }
+
+        const account=new BankAccount(12345678,1000)
+        account.deposit(1000)
+        account.deposit(500)
+        account.getBalance()
+
+        account.accountNumber=987654321
+        account.balance=0
+
+
+        account.withdraw(700)
+        account.getBalance()
+    </script>
+    <body>
+        <h1>Encapsulation</h1>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Abstract</title>
+    </head>
+    <script>
+
+        class Car{
+            constructor(){
+                if(this.constructor == Car){
+                    throw new Error("Car is of nature abstract, cannot be instantiated")
+                }
+            }
+            start(){
+                throw new Error("Method start() must be implemented")
+            }
+            stop(){
+                throw new Error("Method stop() must be implemented")
+            }
+        }
+
+        class HondaCity extends Car{
+            constructor(){
+                super()
+            }
+
+            start(){
+                console.log("Start of HondaCity")
+            }
+            stop(){
+                console.log("Stop of Honda City")
+            }
+           
+        }
+
+        const hc=new HondaCity()
+        hc.start()
+        hc.stop()
+
+        // const car=new Car();
+    </script>
+    <body>
+        <h1>Creating Abstract Class</h1>
+    </body>
+</html>

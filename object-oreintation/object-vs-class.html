@@ -1,0 +1,71 @@
+<html>
+  <head>
+    <title>object vs class</title>
+  </head>
+
+  <script>
+
+    // person --> tom, alex, mike 
+    //  name, age, gender
+
+    let tom={
+        name:'Tom',
+        age:25,
+        gender:'male',
+        display:function(){
+           console.log( `${this.name} is a ${this.gender} and is ${this.age} years old`)
+        }
+    }
+    let alex={
+        abc:'ALex',
+        age:27,
+        gender:'male',
+        displayMyDetails:function(){
+           console.log( `${this.name} is a ${this.gender} and is ${this.age} years old`)
+        }
+    }
+    let mike={
+        name:'Mike',
+        age:30,
+        gender:'male',
+         displayDetails:function(){
+           console.log( `${this.name} is a ${this.gender} and is ${this.age} years old`)
+        }
+    }
+// ------------------------------------------------------
+    class Person{
+
+        constructor(name,age,gender){
+            this.name=name;
+            this.age=age;
+            this.gender=gender;
+        }
+        displayDetails(){
+            console.log(`${this.name} is a ${this.gender} and is ${this.age} years old`)
+        }
+
+    }
+
+    // --------------------------------------------------------------
+
+        let p1=new Person("Tom",25,"male")
+        let p2=new Person("Alex",27,"male")
+        let p3=new Person("Mike",30,"male")
+
+        p1.displayDetails()
+        p2.displayDetails()
+        p3.displayDetails()
+
+        tom.display()
+        alex.displayMyDetails()
+        mike.displayDetails()
+
+
+
+
+  </script>
+
+  <body>
+    <h1>Object vs Class</h1>
+  </body>
+</html>

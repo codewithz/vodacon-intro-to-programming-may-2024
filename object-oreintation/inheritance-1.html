@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Inheritance</title>
+    </head>
+    <script>
+
+        // Adam of Javascript   ---->    Object
+        // Person --> name,age,gender
+        
+        // Country --> name,lat,long 
+
+        // Inheritance --> IS A
+
+        // -------------- IS A  -------------------
+
+        // CAR           IS A    VEHICLE
+        // APPLE         IS A     FRUIT
+        // TOM           IS A    HUMAN 
+
+        
+
+        // // Association --> HAS A 
+
+        // -------------- HAS A ---------------------
+
+        // CAR         HAS A     RADIO 
+        // LIBRARY     HAS A     BOOK
+        // PERSON      HAS A     COUNTRY
+
+        class Animal {
+            constructor(){
+                console.log("Animal ()")
+            }
+
+            eat(){
+                console.log("Eat() of Animal")
+            }
+            makeSound(){
+                console.log("sound() of Animal")
+            }
+        }
+
+        // Cat  IS A Animal
+
+        class Cat extends Animal{
+            constructor(name){
+                super()
+                this.name=name
+            }
+            eat(){
+                console.log(`${this.name} eats Fish and Milk`)
+            }
+
+            makeSound(){
+                console.log(`${this.name} does MEOW`)
+            }
+        }
+
+        const coconut=new Cat("Cocunut")
+        console.log(coconut.name)
+        coconut.eat()
+        coconut.makeSound()
+
+       
+
+
+    </script>
+    <body>
+        <h1>Inheritance</h1>
+    </body>
+</html>
