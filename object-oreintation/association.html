@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>Association</title>
+    </head>
+    <script>
+
+        class Student{
+            constructor(name){
+                this.name=name
+                this.teachers=[]
+            }
+
+            addTeacher(teacher){
+                this.teachers.push(teacher)
+                // teacher.addStudent(this)
+            }
+            
+        }
+
+        class Teacher{
+            constructor(name){
+                this.name=name
+                this.students=[]
+            }
+
+            addStudent(student){
+                this.students.push(student)
+            }
+        }
+
+        const zartab=new Teacher("Zartab")
+        const khobeib=new Teacher("Khobeib")
+
+        const andrew=new Student("Andrew")
+        const clive=new Student("Clive")
+
+        zartab.addStudent(andrew)
+        zartab.addStudent(clive)
+
+        andrew.addTeacher(zartab)
+        andrew.addTeacher(khobeib)
+
+        console.log(zartab)
+        console.log(andrew)
+
+
+    </script>
+    <body>
+        <h1>Association</h1>
+    </body>
+</html>

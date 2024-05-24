@@ -8,10 +8,25 @@
             // Private Variables 
              #accountNumber;
              #balance;
+             #name
+             
 
-            constructor(accountNumber,balance){
+            constructor(accountNumber,balance,name){
                 this.#accountNumber=accountNumber
                 this.#balance=balance;
+                this.#name=name
+            }
+
+            set name(name){
+                if(name.length()>0){
+                    this.#name=name
+                }
+                
+            }
+
+            get name(){
+                console.log("I am in get name ()")
+                return this.#name
             }
 
             
@@ -42,11 +57,11 @@
             }
         }
 
-        const account=new BankAccount(12345678,1000)
+        const account=new BankAccount(12345678,1000,"Tom")
         account.deposit(1000)
         account.deposit(500)
         account.getBalance()
-
+        console.log(account.name)
         account.accountNumber=987654321
         account.balance=0
 

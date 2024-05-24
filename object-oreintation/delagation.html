@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Delegation</title>
+    </head>
+
+    <script>
+        class Manager{
+            constructor(teamMember){
+                this.teamMember=teamMember
+            }
+
+            delegateTask(){
+                console.log("Delegating the task to Team Member")
+                this.teamMember.writeReport()
+            }
+        }
+
+        class TeamMember{
+            constructor(){
+
+            }
+
+            writeReport(){
+                console.log("In Team Member function")
+                console.log("Team member writing a report...")
+            }
+        }
+
+        const teamMember1=new TeamMember()
+        const manager1=new Manager(teamMember1)
+
+        manager1.delegateTask()
+
+    </script>
+    <body>
+        
+        <h1>Delegation</h1>
+    </body>
+</html>

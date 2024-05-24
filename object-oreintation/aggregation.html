@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>Aggregation</title>
+    </head>
+
+    <script>
+        // Human has one or more mobiles
+
+        class Mobile{
+            constructor(name){
+                this.name=name
+            }
+        }
+
+        class Human {
+            constructor(name){
+                this.name=name
+                this.mobiles=[]
+            }
+
+            addMobile(mobile){
+                this.mobiles.push(mobile)
+            }
+        }
+
+        const iphone=new Mobile("Apple IPhone")
+        const galaxy=new Mobile("Samasung Galaxy A70")
+
+        const zartab=new Human("Zartab")
+        zartab.addMobile(iphone)
+        zartab.addMobile(galaxy)
+
+        console.log(zartab)
+
+        console.log(iphone)
+        console.log(galaxy)
+
+
+    </script>
+    <body>
+        
+        <h1>Aggregation</h1>
+    </body>
+</html>
